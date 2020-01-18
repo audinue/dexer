@@ -1,0 +1,11 @@
+#! /bin/sh
+
+set -e
+
+libs=commons-io-2.6.jar:ecj-4.6.1.jar:com.android.dx-1.12.jar:out
+
+echo 'Compiling...'
+javac -d out -cp $libs Dexer.java
+
+echo 'Running...'
+java -cp $libs Dexer
